@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Simples Agenda de Tarefas</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="title">
+            <h1>Minhas Tarefas</h1>
+            <p>Agendar tarefas:</p>
+        </div>
+        <div class="form">
+            <form action = "javascript:void(0);" method="POST" onsubmit="app.Add()">
+                <input type="text" id="add-todo" placeholder="Adicione uma Tarefa">
+                <input type="submit" value="Adicionar" class="btn btn-primary">
+            </form>
+            <p>Tarefas pendentes:</p>
+            <p id = "counter"></p>
+            <table>
+                <tr class="to-do">
+                    <th><h3>A fazer:</h3></th>
+                </tr>
+                <tbody id="tasks">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <div id="edit-box" role="aria-hiden">
+            <form action="javascript:void(0);" method="POST" id="save-edit">
+                <input type="text" id="edit-todo">
+                <input type="submit" value="Salvar" class="btnt btn-sucess">
+                <a onclick="CloseInput()" aria-label="Fechar">&#10006</a>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
